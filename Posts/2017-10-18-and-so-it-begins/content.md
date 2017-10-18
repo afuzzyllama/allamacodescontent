@@ -1,0 +1,1 @@
+The blog is up and running
