@@ -14,7 +14,7 @@ As with most blogs: **This blog contains my own views and opinions and in no way
 
 - Do a technical talk
 - Get a MS in Computer Science from [Johns Hopkins University](https://ep.jhu.edu/).
-- Start a blog - completed 2017-10
+- ~Start a blog~ - completed 2017-10
 
 #### Where to find me
 
