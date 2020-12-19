@@ -1,5 +1,6 @@
 ﻿---
 title: About
+hide: true
 date_created: 2020/01/11
 date_updated: 2020/12/19
 countWords: false
