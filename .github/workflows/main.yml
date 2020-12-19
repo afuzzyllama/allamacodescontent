@@ -1,0 +1,51 @@
+name: Publish content to Azure Blob Storage
+
+on: push
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout the repository 
+      uses: actions/checkout@v2
+
+    - name: Create posts json and rss
+      uses: actions/setup-node@v1
+  
+    - run: node $GITHUB_WORKSPACE/post-data-generator.js
+             
+    - name: Commit and pushes posts json and rss if changed
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add posts/metadata.json
+        git add l3a/
+        git add rss.xml
+        git add sitemap.xml
+        git diff-index --quiet HEAD || git commit -m "Updated posts json"
+        git push https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git 
+
+    - name: Login to Azure
+      uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Publish to Azure storage
+      uses: Azure/cli@v1.0.0
+      with:
+        azcliversion: latest
+        inlineScript: |
+          az storage blob delete-batch -s \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          az storage blob upload -f $GITHUB_WORKSPACE/rss.xml -n rss.xml -c \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          az storage blob upload -f $GITHUB_WORKSPACE/sitemap.xml -n sitemap.xml -c \$web --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/l3a -d \$web/l3a --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/content -d \$web/content --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          az storage blob upload-batch -s $GITHUB_WORKSPACE/img -d \$web/img --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }}
+          
+    - name: Purge Azure storage to refresh
+      uses: Azure/cli@v1.0.0
+      with:
+        azcliversion: latest
+        inlineScript: |
+           az cdn endpoint purge -g allamacodes -n allamacodes --profile-name allamacodes --content-paths /*                        
