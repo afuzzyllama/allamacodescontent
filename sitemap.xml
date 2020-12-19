@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    
+    <url>
+        <loc>https://a.llama.codes/about</loc>
+        <lastmod>2020/12/19</lastmod>
+    </url>
+    <url>
+        <loc>https://a.llama.codes/how-to-self-sign-a-powershell-script</loc>
+        <lastmod>2020/01/24</lastmod>
+    </url>
+    <url>
+        <loc>https://a.llama.codes/creating-a-thread-in-unity3d</loc>
+        <lastmod>2016/08/06</lastmod>
+    </url>
+    <url>
+        <loc>https://a.llama.codes/nuget-and-maintaining-unity3d-libraries</loc>
+        <lastmod>2016/07/23</lastmod>
+    </url>
+    <url>
+        <loc>https://a.llama.codes/github-unity3d-and-visual-studio-team-services</loc>
+        <lastmod>2016/02/25</lastmod>
+    </url>
+    <url>
+        <loc>https://a.llama.codes/antialiasing-procedural-shaders-in-the-unreal-engine</loc>
+        <lastmod>2014/07/21</lastmod>
+    </url>
+</urlset>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>a llama codes</title>
+        <description>Software blog of afuzzyllama</description>
+        <link>https://a.llama.codes/</link>
+        <lastBuildDate>2020-12-19</lastBuildDate>
+        <language>en</language>
+        <item>
+            <title>About</title>
+            <description><a href="https://a.llama.codes/about">read more</a></description>
+            <pubDate>2020/12/19</pubDate>
+            <category>undefined</category>
+        </item>
+        <item>
+            <title>How to Self-sign a Powershell Script</title>
+            <description><a href="https://a.llama.codes/how-to-self-sign-a-powershell-script">read more</a></description>
+            <pubDate>2020/01/24</pubDate>
+            <category>misc</category>
+        </item>
+        <item>
+            <title>Creating a thread in Unity</title>
+            <description><a href="https://a.llama.codes/creating-a-thread-in-unity3d">read more</a></description>
+            <pubDate>2016/08/06</pubDate>
+            <category>Unity</category>
+        </item>
+        <item>
+            <title>NuGet and Maintaining Unity libraries</title>
+            <description><a href="https://a.llama.codes/nuget-and-maintaining-unity3d-libraries">read more</a></description>
+            <pubDate>2016/07/23</pubDate>
+            <category>Unity</category>
+        </item>
+        <item>
+            <title>GitHub, Unity, and Visual Studio Team Services</title>
+            <description><a href="https://a.llama.codes/github-unity3d-and-visual-studio-team-services">read more</a></description>
+            <pubDate>2016/02/25</pubDate>
+            <category>Unity</category>
+        </item>
+        <item>
+            <title>Anti-aliasing procedural shaders in the Unreal Engine</title>
+            <description><a href="https://a.llama.codes/antialiasing-procedural-shaders-in-the-unreal-engine">read more</a></description>
+            <pubDate>2014/07/21</pubDate>
+            <category>Unreal</category>
+        </item>
+    </channel>
+</rss>
