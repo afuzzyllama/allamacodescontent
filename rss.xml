@@ -4,8 +4,14 @@
         <title>a llama codes</title>
         <description>Software blog of afuzzyllama</description>
         <link>https://a.llama.codes/</link>
-        <lastBuildDate>2020-12-19</lastBuildDate>
+        <lastBuildDate>2021-01-30</lastBuildDate>
         <language>en</language>
+        <item>
+            <title>Ray Tracing in Unity3d with Vulkan</title>
+            <description><a href="https://a.llama.codes/ray-tracing-in-unity3d-with-vulkan">read more</a></description>
+            <pubDate>2020/12/20</pubDate>
+            <category>Unity3D, Vulkan, Ray Tracing</category>
+        </item>
         <item>
             <title>How to Self-sign a Powershell Script</title>
             <description><a href="https://a.llama.codes/how-to-self-sign-a-powershell-script">read more</a></description>
